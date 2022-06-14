@@ -68,10 +68,13 @@ void showList(){
     }
 }
 
+
 int main(){
 
 
     createList(2);
+
+    insert_start();
 
     showList();
 
