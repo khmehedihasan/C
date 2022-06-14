@@ -1,19 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
+// defining a struct
 struct list{
     int data;
     struct list *next;
 };
 
+//converting "struct list" into node as data type
 typedef struct list node;
 
+//initializing start pointer as node data type
 node *start = NULL;
 
+//creating new node
 node *getNode(){
     node* newNode;
 
+    //allocating memory as size of node using malloc function
     newNode = (node*) malloc(sizeof(node));
 
     printf("\n Enter data:");
@@ -26,6 +30,7 @@ node *getNode(){
 
 }
 
+//creating linklist
 void createList(int n){
     int i;
     node *newNode;
@@ -51,6 +56,7 @@ void createList(int n){
 
 }
 
+//showing linklist
 void showList(){
     int i = 1;
 
@@ -64,8 +70,6 @@ void showList(){
 
 int main(){
 
-
-   // getNode();
 
     createList(2);
 
