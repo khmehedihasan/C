@@ -99,6 +99,28 @@
 
  }
 
+ void delete_from_last(){
+
+     node *temp;
+     node *prev;
+
+     if(start == NULL){
+        printf("\nLinked list is empty!\n");
+     }else{
+
+        temp = start;
+        while(temp->next != NULL){
+            prev = temp;
+            temp = temp->next;
+        }
+        prev->next = NULL;
+        free(temp);
+
+        printf("\nLast node deleted\n");
+     }
+
+ }
+
  void showList(){
     node *temp;
     temp = start;
@@ -153,8 +175,9 @@
 
         switch(option){
         case 1:
-            printf("Option 1");
-
+            delete_from_last();
+            printf("\n\nlinked-list:\t");
+            showList();
             break;
 
         case 2:
@@ -188,8 +211,6 @@
         }
      }
 
-
-    //showList();
 
     return 0;
  }
