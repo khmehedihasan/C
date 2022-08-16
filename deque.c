@@ -87,7 +87,7 @@ void dequeue_rear(){
         if(temp->next == NULL){
             printf("\n\n%d: is deleted from rear.",temp->data);
             free(temp);
-            start == NULL;
+            start = NULL;
             rear = NULL;
         }else{
             while(temp->next != NULL){
